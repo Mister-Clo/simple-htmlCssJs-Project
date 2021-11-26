@@ -51,7 +51,7 @@ nav .onglets a{
     padding-bottom: 5px;
 }
 
-header{
+header#home{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,17 +64,23 @@ header h1{
     font-family: 'Playfair Display', serif;
     font-size: 50px;
 }
+
+header#home h1, header#home h4 {
+    text-shadow: 2px 2px 10px #717171;
+}
+
 header h4{
     margin-top: -20px;
     font-size: 20px;
     text-align: center;
     border-bottom: 1px solid #fff;
 }
-header button{
+header#home button{
     padding: 10px 20px;
     background-color: #fff;
     color:#000;
     border:none;
+    box-shadow: 6px 4px 10px #000;
     margin-bottom: 30px;
     outline:none;
     font-size: 20px;
@@ -83,7 +89,7 @@ header button{
     transition: all 0.5s;
 }
 
-header button:hover{
+header#home button:hover{
     padding: 10px 20px;
     background-color: #000;
     color:#fff;
@@ -117,6 +123,28 @@ header button:hover{
     height:300px;
     width: 400px;
     margin-top: 5px;
+}
+
+
+.main .members{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.main .members .member{
+    flex-basis: 25%;
+    text-align: center;
+    padding-left: 0.4%;
+    padding-right: 0.4%;
+    
+}
+
+.main .member img{
+    border-radius: 50%;
+    width: 60%;
+    border: #6f6f6f 2px double;
 }
 
 footer{
@@ -184,6 +212,22 @@ footer #contact{
     .main .content .card{
         display: block;
     }
+
+    .main .members{
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    
+    .main .members .member{
+        flex-basis: 80%;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-right: 1%;
+        padding-left: 1%;
+        
+    }
+    
     footer{
         padding: 30px;
     }
