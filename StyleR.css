@@ -1,0 +1,93 @@
+main{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .content .card-r{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:20px;
+}
+.main .content .card-r .left{
+   flex: 0 0 30%;
+   padding: 20px;
+   background-color:black;
+   color:#fff;
+}
+.main .content .card-r .right img{
+    height:150px;
+    width: 400px;
+    margin-top: 5px;
+}
+
+
+.main .members{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.main .members .member{
+    flex-basis: 25%;
+    text-align: center;
+    padding-left: 0.4%;
+    padding-right: 0.4%;
+    
+}
+
+.main .member img{
+    border-radius: 50%;
+    width: 60%;
+    border: #6f6f6f 2px double;
+
+@media screen and (max-width:680px){
+    nav .onglets {
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    header h1{
+        font-family: 'Playfair Display', serif;
+        font-size: 38px;
+    }
+    a.homelink.logo{
+        display: inline-block;
+        width: 20%;
+    }
+
+    .main .card-r {
+        margin: 10px;
+    }
+    .main .content .card-r .right img{
+        height:200px;
+        width: 100%;
+        margin-top: -0px;
+    }
+    .main .content .card-r{
+        display: block;
+    }
+
+    .main .members{
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    
+    .main .members .member{
+        flex-basis: 80%;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-right: 1%;
+        padding-left: 1%;
+        
+    }
+    
+    .Garde 
+    {
+        border-radius: solid 10px grey ;
+    }
+}
+
+}
