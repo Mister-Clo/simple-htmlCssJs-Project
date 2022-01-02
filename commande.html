@@ -29,95 +29,101 @@
     <section class="main" id="produits">
         <section>
             <div class="container">
+                <h1 class ="titre">Veuillez remplir le formulaire ci-dessous</h1>
                 <div class="title">Coordonnées</div>
-                <form name="chaudla">
-                    <div class="user-details">
-                        <div class="userdetail1">
-                            <div class="input-box">
-                                <input type="text" placeholder="Nom" name="nom" value="Geran">
+
+                    <form name="chaudla">
+                        <div class="user-details">
+                            <div class="userdetail1">
+                                <div class="input-box">
+                                    <input type="text" placeholder="Nom" name="nom" >
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" placeholder="Prenom" name="prenom">
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" placeholder="Adresse de livraison" name="adr"  >
+                                </div>
                             </div>
-                            <div class="input-box">
-                                <input type="text" placeholder="Prenom" name="prenom" value="Ludo">
-                            </div>
-                            <div class="input-box">
-                                <input type="text" placeholder="Adresse de livraison" name="adr"  value="12 rue marnons">
+                            <div class="userdetail2">
+                                <div class="input-box">
+                                    <input type="text" placeholder="email" name="mail" required>
+                                </div>
                             </div>
                         </div>
-                        <div class="userdetail2">
-                            <div class="input-box">
-                                <input type="text" placeholder="email" name="mail" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mode-livraison">
-                        <span class="details">Mode de livraison</span>
-                        <select name="modeliv" id="modeliv">
-                            <option value="Option1">Option1</option>
-                            <option value="Option11">Option11</option>
-                        </select>
-                    </div>
-                    <div class="paiement-details">
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <span class="paiement-title">Mode de paiement</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="gender">Paiement sur place</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="gender">Paiement en ligne</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="menu-commander">
-                        <div class="input-box">
-                            <span class="details">Entrées</span>
-                            <div class="select-style">
-                            <select name="entree" id="pet-select">
-                                <option value="Option2">Option2</option>
-                                <option value="Option22">Option22</option>
+                        <div class="mode-livraison">
+                            <span class="details">Mode de livraison</span>
+                            <select name="modeliv" id="modeliv">
+                                <option selected disabled>Sélectionnez un mode de livraison</option>
+                                <option value="A domicile">A domicile</option>
+                                <option value="Point relais">Point relais</option>
                             </select>
+                        </div>
+                        <div class="paiement-details">
+                            <input type="radio" name="gender" id="dot-1">
+                            <input type="radio" name="gender" id="dot-2">
+                            <span class="paiement-title">Mode de paiement</span>
+                            <div class="category">
+                                <label for="dot-1">
+                                    <span class="dot one"></span>
+                                    <span class="gender">Paiement sur place</span>
+                                </label>
+                                <label for="dot-2">
+                                    <span class="dot two"></span>
+                                    <span class="gender">Paiement en ligne</span>
+                                </label>
                             </div>
                         </div>
-                        <div class="input-box">
-                            <span class="details">Plat</span>
-                            <div class="select-style">
-                            <select name="plat" id="plat-select">
-                                <option value="Option3">Option3</option>
-                                <option value="Option33">Option33</option>
-                            </select>
+                        <div class="menu-commander">
+                            <div class="input-box">
+                                <div class="select-style">
+                                    <span class="details">Entrées</span>
+                                <select name="entree">
+                                    <option selected disabled>Sélectionnez une entrée</option>
+                                    <option value="Option2">Sushis</option>
+                                    <option value="Option22">Salade</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <div class="select-style">
+                                    <span class="details">Plat</span>
+                                <select name="plat" >
+                                    <option selected disabled>Sélectionnez un plat</option>
+                                    <option value="Option3">Boeuf au oignon</option>
+                                    <option value="Option33">Ramen</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <div class="select-style">
+                                    <span class="details">Dessert</span>
+                                <select name="dessert" >
+                                    <option selected disabled>Sélectionnez un dessert</option>
+                                    <option value="Option4">Glace</option>
+                                    <option value="Option44">Pas de dessert</option>
+                                </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="input-box">
-                            <span class="details">Dessert</span>
-                            <div class="select-style">
-                            <select name="dessert" id="plat-select">
-                                <option value="Option4">Option4</option>
-                                <option value="Option44">Option44</option>
-                            </select>
-                            </div>
+                        <div class="button">
+                            <button type="submit" class="btn">Ajouter</button>
+                            <button type="button" class="btn">Supprimer</button>
+                            <button type="reset" class="btn">Annuler</button>
                         </div>
-                    </div>
-                    <div class="button">
-                        <input type="submit" value="Ajouter" id="bubuajouter" onclick= "getName()" >
-                        <input type="submit" value="Supprimer" id="bubuannuler" onclick="supprimer()">
-                    </div>
-                </form>
+                    </form>
+
             </div>
         </section>
 
         <table id="table">
-            <!-- Tableau commandes</caption> -->
-            <tr>
-                <th>Nom</th>
-                <th>Adresse de livraison</th>
-                <th>Mode de livraison</th>
-                <th>Entrée</th>
-                <th>Plat</th>
-                <th>Dessert</th>
+            <tr class="thead">
+                
             </tr>
+            <tbody>
+        
+            </tbody>
+        
         </table>
     </section>
 

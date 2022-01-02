@@ -1,52 +1,65 @@
-function getName() {
+var info = document.forms.chaudla.elements;
+var btnAdd =  document.querySelector("button.btn[type='submit']");
+var btnDel = document.querySelector("button.btn[type='button']");
+var tableHead = document.querySelector(".thead");
+var tableBody = document.querySelector("tbody");
+var firstAdd = 0;
+
+btnAdd.addEventListener("click", (e)=>{
+        e.preventDefault();
+        if (firstAdd == 0) {
+            ajouter();
+            }
+        ajouter2();
+     });
+
+     btnDel.addEventListener("click", (e)=>{
+        e.preventDefault();
+        supprimer();
+     });
+
     
-    var nom = document.chaudla.nom.value
-    var prenom = document.chaudla.prenom.value
-    var adr = document.chaudla.adr.value
-    var mail = document.chaudla.mail.value
-    var mode = document.chaudla.modeliv.value
-    var entr = document.chaudla.entree.value
-    var plat = document.chaudla.plat.value
-    var dess = document.chaudla.dessert.value
+function ajouter() {
 
-    if (nom === "" || prenom === "" || adr === "") {
-        return;
-    }
-    
-    const ligneTab = document.createElement("tr");
-    const celluleTab1 = document.createElement("td");
-    const celluleTab2 = document.createElement("td");
-    const celluleTab3 = document.createElement("td");
-    const celluleTab4 = document.createElement("td");
-    const celluleTab5 = document.createElement("td");
-    const celluleTab6 = document.createElement("td");
-
-    celluleTab1.textContent = nom;
-    celluleTab2.textContent = adr;
-    celluleTab3.textContent = mode;
-    celluleTab4.textContent = entr;
-    celluleTab5.textContent = plat;
-    celluleTab6.textContent = dess;
-
-    ligneTab.append(celluleTab1);
-    ligneTab.append(celluleTab2);
-    ligneTab.append(celluleTab3);
-    ligneTab.append(celluleTab4);
-    ligneTab.append(celluleTab5);
-    ligneTab.append(celluleTab6);
-
-    var tab = document.getElementById("table");
-    tab.appendChild(ligneTab);
-
+    var newCell = tableHead.appendChild(document.createElement("th"));
+    newCell.textContent = "Nom";
+    newCell = tableHead.appendChild(document.createElement("th"));
+    newCell.textContent = "Adresse de livraison";
+    newCell = tableHead.appendChild(document.createElement("th"));
+    newCell.textContent = "Mode de livraison";
+    newCell = tableHead.appendChild(document.createElement("th"));
+    newCell.textContent = "Entrée";
+    newCell = tableHead.appendChild(document.createElement("th"));
+    newCell.textContent = "Plat";
+    newCell = tableHead.appendChild(document.createElement("th"));
+    newCell.textContent = "Dessert"; 
+    firstAdd++;
 }
 
 
-function supprimer() {
-    var supp = document.querySelector("table");
-    var rowCount = supp.rows.length;
-    if (rowCount === 1) {
-        return;
-    }
-    table.deleteRow(rowCount -1);
+function ajouter2() {
+    var newtr =  document.createElement("tr");
+    tableBody.appendChild(newtr);
+
+    var newCell = newtr.appendChild(document.createElement("td"));
+    newCell.textContent = info.nom.value;
+    newCell = newtr.appendChild(document.createElement("td"));
+    newCell.textContent = info.adr.value;
+    newCell = newtr.appendChild(document.createElement("td"));
+    newCell.textContent = info.modeliv.value;
+    newCell = newtr.appendChild(document.createElement("td"));
+    newCell.textContent = info.entree.value;
+    newCell = newtr.appendChild(document.createElement("td"));
+    newCell.textContent = info.plat.value;
+    newCell = newtr.appendChild(document.createElement("td"));
+    newCell.textContent = info.dessert.value; 
 }
+
+
+function supprimer(){
+        while(tableBody.firstChild){
+            tableBody.removeChild(tableBody.firstChild);
+        }
+    }
+
 

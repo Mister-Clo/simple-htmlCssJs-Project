@@ -78,6 +78,12 @@ header h4{
     text-align: center;
     border-bottom: 1px solid #fff;
 }
+
+header#home button a{
+    text-decoration: none;
+    color: #000;
+}
+
 header#home button{
     padding: 10px 20px;
     background-color: #fff;
@@ -90,6 +96,12 @@ header#home button{
     font-family: 'Playfair Display', serif;
     cursor: pointer;
     transition: all 0.5s;
+}
+
+header#home button:hover a{
+    
+    color:#fff;
+    
 }
 
 header#home button:hover{
